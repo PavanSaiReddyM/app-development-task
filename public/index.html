@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatroom</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    
+    <div id="join-screen">
+        <div id="join-box">
+            <h1> Chatroom</h1>
+            <input type="text" id="nameInput" placeholder="Enter your name..." maxlength="20" autocomplete="off"/>
+            <button id="joinButton">Join Room</button>
+        </div>
+    </div>
+
+  
+    <div id="chat-screen" class="hidden">
+        <div id="chat-card">
+            <div id="chat-header">
+                <span>Chatroom</span>
+                <span id="header-count"> <span id="header-clients">0</span> online</span>
+            </div>
+
+            <div id="chatbox">
+                <ul id="messages"></ul>
+                <p id="feedback"></p>
+            </div>
+
+            <div id="input-area">
+                <input type="text" id="messageInput" placeholder="Type a message..." autocomplete="off"/>
+                <label id="imageLabel" for="imageInput">+</label>
+                <input type="file" id="imageInput" accept="image/*" hidden/>
+                <label id="audioLabel" for="audioInput">&#127908;</label>
+                <input type="file" id="audioInput" accept="audio/*" hidden/>
+                <button id="sendButton">&#10148;</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

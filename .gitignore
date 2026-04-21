@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Database
+chat.db
+
+# Uploaded files
+public/uploads/
+public/audio/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
